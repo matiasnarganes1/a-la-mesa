@@ -16,31 +16,82 @@ body{
     font-family: "Mukta Regular";
     src: url(../fonts/Mukta-Regular.ttf);
 }
+
 nav {
     border-bottom: 5px solid #33312e;
 }
-
+  
 .menu a {
     color: #c63b28;
 }
-
+  
 .menu img {
     padding-top: 20px;
-    height: 10%;
-    width: 10%;
+    height: auto;
+    width: 20%;
 }
-
+  
 .menu ul {
     border-color: #33312e;
-    display: inline;
 }
-
+  
 .menu ul li {
-    display: inline;
     margin-right: 20px;
     font-size: 35px;
 }
 
+@media (max-width: 992px) {
+    .menu img {
+        height: auto;
+        width: 25%;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu img {
+        height: auto;
+        width: 45%;
+    }
+}
+  
+@media (max-width: 767.98px) {
+    .menu ul li {
+      font-size:20px;
+    }
+
+    .navbar {
+        background-color: #33312E;
+    }
+      
+    .menu img {
+        height: auto;
+        width: 25%;
+    }
+
+    .header-content {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+    }
+      
+    .header-content .navbar-toggler {
+        grid-column: 1 / 2;
+    }
+      
+    .header-content .navbar-brand {
+        grid-column: 2 / 3;
+        text-align: center;
+    }
+
+    .lista-servicios {
+        text-align: center;
+    }
+
+    .imagen-lista {
+        text-align: center;
+    }
+      
+}  
 
 footer {
     text-align: center;
@@ -87,10 +138,11 @@ h2{
 .desc-container {
     background-color: #33312e;
     border-radius: 20px;
-    padding: 15px;
-    margin: 0 250px;
-    text-align: center;
-  }
+    justify-content: center;
+    padding: 2%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
   
 .desc-container p {
     color: #f2dcce;
@@ -115,9 +167,7 @@ h2{
 }
 
 #servicios ul {
-    margin-left: 50px;
     margin-top: 10px;
-    margin-right: 200px;
     padding-right: 20px;
     color: #f2dcce;
     border-radius: 20px;

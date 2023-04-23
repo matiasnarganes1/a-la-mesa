@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="../img/mesero.png" type="image/x-icon">
   <link rel="icon" href="../img/mesero.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="../styles/styles.css">
@@ -15,20 +17,42 @@
 
 <body>
   <header>
-    <nav class="menu">
-      <img src="../img/logo.png" alt="logo" href="../pages/index.html">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="tarifas.html">Tarifas</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-md navbar-light menu">
+      <div class="container-fluid">
+        <div class="header-content">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="../img/logo.png" alt="logo">
+          </a>
+        </div>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tarifas.html">Tarifas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
   <section id="servicios">
-    <ul>
+    <ul class="lista-servicios">
       <li>Servicio 1 <span> Descripción del servicio 1 elit.sit amet consectetu</span></li>
       <li>Servicio 2 <span> Descripción del servicio 2 elit.sit amet consectetu</span></li>
       <li>Servicio 3 <span> Descripción del servicio 3 elit.sit amet consectetu</span></li>
@@ -36,7 +60,7 @@
       <li>Servicio 5 <span> Descripción del servicio 5 elit.sit amet consectetu</span></li>
     </ul>
 
-    <img src="../img/persona_con_menu_sin_editar.jpg" alt="persona con menu en las manos">
+    <img class="imagen-lista" src="../img/persona_con_menu_editada.jpg" alt="persona con menu en las manos">
   </section>
 
   <div class="desc-container">
