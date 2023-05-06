@@ -1,0 +1,289 @@
+$background-color: #000000;
+$border-color: #33312e;
+$text-color: #f2dcce;
+$link-color: #c63b28;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+}
+
+body {
+  background-color: $background-color;
+  font-family: 'Mukta Medium';
+}
+
+@font-face {
+  font-family: 'Mukta SemiBold';
+  src: url('../fonts/Mukta-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Mukta Medium';
+  src: url('../fonts/Mukta-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Mukta Regular';
+  src: url('../fonts/Mukta-Regular.ttf');
+}
+
+nav {
+  border-bottom: 5px solid $border-color;
+}
+
+.menu {
+  a {
+    color: $link-color;
+  }
+
+  img {
+    padding-top: 20px;
+    height: auto;
+    width: 20%;
+    transition: transform 0.3s;
+
+    @include respond-to(medium) {
+      width: 45%;
+    }
+
+    @include respond-to(small) {
+      width: 25%;
+    }
+  }
+
+  .logo-a {
+    @include respond-to(large) {
+      &:hover {
+        display: none;
+      }
+    }
+  }
+
+  .logo-b {
+    display: none;
+  }
+
+  &:hover {
+    .logo-a {
+      display: none;
+    }
+
+    .logo-b {
+      display: block;
+
+      @include respond-to(large) {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @include respond-to(small) {
+    .logo-a {
+      display: none;
+    }
+
+    .logo-b {
+      display: block;
+    }
+  }
+
+  ul {
+    border-color: $border-color;
+
+    li {
+      margin-right: 20px;
+      font-size: 35px;
+      &:hover {
+        background-color: #33312e;
+      }
+
+      @include respond-to(small) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.lista-servicios, .imagen-lista {
+  @include respond-to(small) {
+    text-align: center;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+
+  ul {
+    border-color: $border-color;
+    display: inline;
+
+    li {
+      display: inline;
+      margin-right: 50px;
+      font-size: x-large;
+
+      a {
+        i {
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  .copy {
+    color: $text-color;
+  }
+}
+
+.container {
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-family: 'Mukta SemiBold';
+  color: $text-color;
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Mukta SemiBold';
+  font-size: 35px;
+  color: $text-color;
+  margin-left: 20px;
+}
+
+.desc-container {
+  background-color: $border-color;
+  border-radius: 20px;
+  justify-content: center;
+  padding: 2%;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  p {
+    color: $text-color;
+    font-size: 20px;
+  }
+}
+
+.img-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  img {
+    height: 65%;
+    width: 65%;
+  }
+}
+
+#servicios {
+  ul, img {
+    background-color: $border-color;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  ul {
+    margin-top: 10px;
+    padding-right: 20px;
+    color: $text-color;
+    border-radius: 20px;
+    font-size: 25px;
+
+    li {
+      span {
+        font-family: 'Mukta Regular';
+        font-size: medium;
+        margin-left: 30px;
+        display: block;
+      }
+    }
+  }
+
+  img {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 35%;
+    height: 35%;
+  }
+}
+
+.grid {
+  color: $text-color;
+  font-size: 25px;
+  margin-top: 50px;
+  text-align: center;
+
+  &-header, &-row {
+    p {
+      display: inline;
+      margin-right: 45px;
+    }
+  }
+
+  &-row {
+    a {
+      display: inline;
+      font-size: 20px;
+      margin-right: 50px;
+      color: $link-color;
+    }
+  }
+}
+
+.nosotros {
+  img {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 35%;
+    height: 35%;
+  }
+
+  .desc-nosotros {
+    background-color: $border-color;
+    border-radius: 20px;
+    padding: 15px;
+
+    p {
+      color: $text-color;
+      font-size: 20px;
+    }
+  }
+}
+
+.contacto {
+  color: $text-color;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-left: 20px;
+
+  form {
+    display: block;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  button {
+    display: block;
+  }
+}
