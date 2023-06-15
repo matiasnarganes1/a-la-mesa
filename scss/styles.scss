@@ -153,6 +153,8 @@ h1 {
   color: $text-color;
   font-size: 50px;
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 h2 {
@@ -259,6 +261,7 @@ h2 {
     p {
       color: $text-color;
       font-size: 20px;
+      margin-bottom: 20px;
     }
   }
 }
